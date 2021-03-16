@@ -1,0 +1,41 @@
+% For post graduate student only.
+\chapter{CONFIRMATION BY PANEL OF EXAMINERS}
+\makeatletter\noindent\normalsize
+I certify that a Panel of Examiners has met on {\@datesubmit} to conduct the final examination of {\@author} on{\apply@gender} \textbf{\@programme~(\@programmeT)} \MakeLowercase\@reportType\ entitled ``{\@title}'' in accordance with Universiti Teknologi MARA Act 1976 (Akta 173). The Panel of Examiners recommends that the student be awarded the relevant degree. The Panel of Examiners was as follows:
+\makeatother
+
+% List the chairman, the dean and all internal and external examiners here!
+\null\vspace{14mm} % text to examiners
+\noindent
+\begin{tabular}{@{}p{.5\textwidth}p{.45\textwidth}}
+% The @{} at start and end removes the outer padding,
+% but leaves the column separation between columns.
+Name                        & Name\\
+Designation eg. Professor   & Designation\\
+Faculty of                  & Faculty \\
+University .,,              & University\\
+(Chairman)                  & (External Examiner)\\
+\null\vspace{1cm} &\\
+Name                        & Name\\
+Designation eg. Professor   & Designation\\
+Faculty of                  & Faculty \\
+University .,,              & University\\
+(Internal Examiner)         & (External Examiner)\\
+\null\vspace{1cm} &\\
+Name                        & Name\\
+Designation eg. Professor   & Designation\\
+Faculty of                  & Faculty \\
+University .,,              & University\\
+(Internal Examiner)         & (External Examiner)\\
+\end{tabular}
+
+\null\vspace{2cm}
+\noindent
+\begin{tabular}{@{}p{.45\textwidth}p{.45\textwidth}}
+                            & \textbf{THE DEAN'S NAME IN UPPERCASE LETTER}\\
+                            & Dean\\
+                            & Institute of Graduate Studies\\
+                            & \makeatletter {\@university} \makeatother\\
+                            & Date: \makeatletter {\@datesubmit} \makeatother\\
+\end{tabular}
+

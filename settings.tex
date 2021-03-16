@@ -1,0 +1,108 @@
+%=====================%
+% uitmthesis Settings %
+%=====================%
+
+%==========================%
+% For measuring length     %
+% Disable when not needed! %
+%==========================%
+\usepackage[showframe,pass]{geometry}
+\usepackage[grid,
+  gridcolor=red!20,
+  subgridcolor=green!20,
+  gridunit=mm]{eso-pic}
+%% Add lipsum dummy text.
+\usepackage{lipsum}
+
+%% Mathematics related
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+%% Images
+\usepackage{graphicx}
+% define images locations.
+\graphicspath{{mainmatter/images/},{appendices/images/}}
+\usepackage{subcaption}
+
+%% References Type
+%\usepackage[numbers]{natbib} % enable to use IEEEtran, disable for apalike2
+\usepackage{natbib} % enable to use apalike2, disable for IEEEtran
+%% To use IEEEtran, in settings.tex, use \usepackage[numbers]{natbib}
+%% To use IEEEtran, need to replace \citet to \cite or \citep everywhere.
+\bibliographystyle{apalike2} %IEEEtran,apalike2.
+%\bibliographystyle{IEEEtran}
+\setlength{\bibhang}{0.5in} % set the length of the bibliography hanging indent
+
+\usepackage{memhfixc} % add memhfixc to use hyperref package
+\usepackage[bookmarksnumbered,bookmarksdepth=4,hidelinks,bookmarks=true,bookmarksopen=true]{hyperref}
+\usepackage[numbered]{bookmark}
+
+%==================================================================%
+% Theorem, corollary, lemma, remark, definition, example, solution %
+%==================================================================%
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+\theoremstyle{definition}\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[chapter]
+%% Solution environment
+% from https://tex.stackexchange.com/a/19948/2405
+\newenvironment{solution}{%
+    \let\oldqedsymbol=\qedsymbol%
+    \def\@addpunct##1{}%
+    \renewcommand{\qedsymbol}{$\blacktriangleleft$}%
+    \begin{proof}[\bfseries\upshape Solution]}%
+    {\end{proof}%
+    \renewcommand{\qedsymbol}{\oldqedsymbol}}
+            
+%====================================%
+% Settings. Please edit accordingly. %
+%====================================%
+\title{A Great Thesis written in a great university}
+\author{A Great Thesis Author bin A Great Dad}
+\date{March 2021}
+\datesubmit{July 3, 2021} % viva date for postgraduate / submission date for FYP
+\supervisor{Prof. Dr. The Great Supervisor}
+\university{Universiti Teknologi MARA}
+
+%% Report (for fyp) / Thesis (for master/phd) / Dissertation
+%% Important: Case sensitive!!!
+%\reportType{Report} % for FYP
+%\reportType{Dissertation} % for postgraduate coursework / mixed mode
+\reportType{Thesis} % for postgraduate by research
+
+%% BSc,MSc,MA,MACT,MBA,MIBF,MAS,DBA,PhD,MMus,MEd,LL.M, etc,
+%% Important: Case sensitive!!!
+%\degreeAcronym{BSc}
+%\degreeAcronym{DBA}
+%\degreeAcronym{MBA}
+%\degreeAcronym{MSc}
+\degreeAcronym{PhD}
+
+%% Programme
+\programmeCode{CS952}\programme{Doctor of Philosophy}\programmeT{Mathematics}
+%\programmeCode{CS248}\programme{Bachelor of Science (Hons.)}\programmeT{Management Mathematics}
+%\programmeCode{CS953}\programme{Doctor of Philosophy}\programmeT{Statistics}
+%\programmeCode{CS752}\programme{Master of Science}\programmeT{Mathematics}
+%\programmeCode{AA901}\programme{Doctor of Business Administration}\programmeT{Educational Management and Leadership}
+
+%% GENDER. male, female i<- important: lowercase!
+%\gender{female}
+\gender{male}
+
+%% MISC
+\studentid{2032444444}
+\faculty{Faculty of Computer and Mathematical Sciences}
+
+%============================%
+% PDF metadata with hyperref %
+%============================%
+\makeatletter
+\hypersetup{
+    pdfinfo={
+        Title={\@title},
+        Author={\@author},
+    }
+}
+\makeatother

@@ -1,6 +1,6 @@
 %=================================================================%
 % CLASS: uitmthesis                                               %
-% Version: 1.0-2021/03/16                                         %
+% Version: 1.0.1-2021/03/26                                       %
 % License: LPPL 1.3c                                              %
 % Copyright (C) 2021 Rizauddin Saian <rizauddin at gmail dot com> %
 %                                                                 %
@@ -18,6 +18,10 @@
 % This class was developed based on the                           %
 % "Guidelines on Thesis/Dissertation Format" handbook             %
 % by IPSis UiTM.                                                  %
+%                                                                 %
+% History:                                                        %
+% 2021/03/16 v1.0 First release.                                  %
+% 2021/03/26 v1.0.1 Remove gender bug.                            %
 %=================================================================%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -291,8 +295,8 @@
 % \newcommand{\gender}[1]{\renewcommand{\@gender}{#1}}
 \newcommand{\apply@gender}{%
     \begingroup
-    \long\def\@male{male}
-    \long\def\@female{female}%
+    \def\@male{male}
+    \def\@female{female}%
     \ifx\@gender\@female
         her%
     \else

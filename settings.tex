@@ -25,12 +25,16 @@
 
 %% References Type
 %\usepackage[numbers]{natbib} % enable to use IEEEtran, disable for apalike2
-\usepackage{natbib} % enable to use apalike2, disable for IEEEtran
+%\usepackage{natbib} % enable to use apalike2, disable for IEEEtran
 %% To use IEEEtran, in settings.tex, use \usepackage[numbers]{natbib}
 %% To use IEEEtran, need to replace \citet to \cite or \citep everywhere.
-\bibliographystyle{apalike2} %IEEEtran,apalike2.
+%\bibliographystyle{apalike2} %IEEEtran,apalike2.
 %\bibliographystyle{IEEEtran}
-\setlength{\bibhang}{0.5in} % set the length of the bibliography hanging indent
+%\setlength{\bibhang}{0.5in} % set the length of the bibliography hanging indent
+\usepackage{csquotes}
+%% APA7: style=apa; IEEE: style=ieee
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references/myref.bib}
 
 \usepackage{memhfixc} % add memhfixc to use hyperref package
 \usepackage[bookmarksnumbered,bookmarksdepth=4,hidelinks,bookmarks=true,bookmarksopen=true]{hyperref}

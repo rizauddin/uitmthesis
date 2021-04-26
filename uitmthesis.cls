@@ -1,6 +1,5 @@
 %=================================================================%
 % CLASS: uitmthesis                                               %
-% Version: 1.0.1-2021/03/26                                       %
 % License: LPPL 1.3c                                              %
 % Copyright (C) 2021 Rizauddin Saian <rizauddin at gmail dot com> %
 %                                                                 %
@@ -20,8 +19,10 @@
 % by IPSis UiTM.                                                  %
 %                                                                 %
 % History:                                                        %
-% 2021/03/16 v1.0 First release.                                  %
+% 2021/04/26 v1.1.1 Use REFERENCES instead of BIBLIOGRAPHY        %
+% 2021/04/14 v1.1 Change to biblatex from natbib. Now support APA7%
 % 2021/03/26 v1.0.1 Remove gender bug.                            %
+% 2021/03/16 v1.0 First release.                                  %
 %=================================================================%
 
 \NeedsTeXFormat{LaTeX2e}

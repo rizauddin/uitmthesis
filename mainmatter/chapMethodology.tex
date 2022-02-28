@@ -10,13 +10,13 @@
     \caption{My Sample}
     \begin{tabular}{cc}
         \toprule %header
-        Millimeters & Centimeters\\
-        mm          &   cm\\
+        \textbf{Millimeters} & \textbf{Centimeters}\\
+        \textbf{mm}          &   \textbf{cm}\\
         \midrule
-        1           &   0.1\\
-        10          &   1\\
-        100         &   10\\
-        1000        &   100\\
+        1           &   0.1\\ \hline
+        10          &   1\\ \hline
+        100         &   10\\ \hline
+        1000        &   100\\ \hline
         10000       &   1000\\
         \bottomrule
     \end{tabular}
@@ -28,13 +28,13 @@
     \caption{The Second Sample}
     \begin{tabular}{>{\centering\arraybackslash}p{.47\textwidth} >{\centering\arraybackslash}p{.47\textwidth}}
         \toprule %header
-        Millimeters & Centimeters\\
-        mm          &   cm\\
+        \textbf{Millimeters} & \textbf{Centimeters}\\
+        \textbf{mm}          &   \textbf{cm}\\
         \midrule
-        1           &   0.1\\
-        10          &   1\\
-        100         &   10\\
-        1000        &   100\\
+        1           &   0.1\\ \hline
+        10          &   1\\ \hline
+        100         &   10\\ \hline
+        1000        &   100\\ \hline
         10000       &   1000\\
         \bottomrule
     \end{tabular}
@@ -48,29 +48,139 @@
         \includegraphics{mainmatter/images/logouitm.png}
     }
     \caption{A New Figure Again!}
-    \label{fig:my_label2}
+    \label{fig:newfig}
 \end{figure}
 
 \lipsum[2]
 
 \begin{figure}[ht]
     \centering
-    \fbox{
+    \begin{tabular}{|c|c|}
+    \hline
      \begin{subfigure}[b]{0.44\textwidth}
          \centering
          \includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
          \caption{$y=x$}
-         \label{fig:y equals x}
-     \end{subfigure}
-    }
-    \fbox{
+         \label{fig:y_equals_x}
+     \end{subfigure} &
      \begin{subfigure}[b]{0.44\textwidth}
          \centering
          \includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
          \caption{$x=y$}
-         \label{fig:x equals y}
-     \end{subfigure}
-    }
+         \label{fig:x_equals_y}
+     \end{subfigure} \\
+     \hline
+    \end{tabular}
     \caption{The Two Figures}
-    \label{fig:my_label}
+    \label{fig:the2fig}
 \end{figure}
+
+\lipsum[1]
+
+\begin{figure}[ht]
+    \centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:x_equals_y4}
+		\end{subfigure} & 
+				\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:xy_equals_y3}
+		\end{subfigure}	\\
+		\hline
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:yy1}
+		\end{subfigure} & 
+				\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:xy2}
+		\end{subfigure}	\\
+		\hline		
+	\end{tabular}
+    \caption{The Four Figures}
+    \label{fig:the4fig}
+\end{figure}
+
+
+\begin{landscape}
+
+\begin{figure}[ht]
+    \centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-a.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly1}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-b.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly2}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-c.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly3}
+		\end{subfigure}\\
+		\hline
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:ly4}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:ly5}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{mainmatter/images/logouitm.png}
+			\caption{$x=y$}
+         	\label{fig:ly6}
+		\end{subfigure}\\
+		\hline
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-a.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly7}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-b.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly8}
+		\end{subfigure} & 
+		\begin{subfigure}[b]{0.44\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{example-image-c.jpg}
+			\caption{$x=y$}
+         	\label{fig:ly9}
+		\end{subfigure}\\
+		\hline
+	\end{tabular}	      
+    \caption{The Landscape Figures}
+    \label{fig:my_label_landscape}
+\end{figure}
+
+\end{landscape}
+
+\lipsum[1]

@@ -19,6 +19,8 @@
 % by IPSis UiTM.                                                  %
 %                                                                 %
 % History:                                                        %
+% 2022/02/28 v1.2 Support for longtable, longtable on landscape   %
+% page, new figure format and figures on landscape page.          %
 % 2021/04/26 v1.1.1 Use REFERENCES instead of BIBLIOGRAPHY        %
 % 2021/04/14 v1.1 Change to biblatex from natbib. Now support APA7%
 % 2021/03/26 v1.0.1 Remove gender bug.                            %
@@ -40,6 +42,8 @@
 \let\ordinal\relax % to remove Package fmtcount Warning: \ordinal already defined use \FCordinal instead
 \RequirePackage{fmtcount}
 \RequirePackage{etoolbox}
+\RequirePackage{longtable}
+\RequirePackage{lscape}
 
 %=======%
 % Fonts %

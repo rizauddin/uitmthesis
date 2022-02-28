@@ -20,13 +20,13 @@ e^{\pi i} + 1 = 0
     %\begin{tabular}{cc}
     \begin{tabular}{>{\centering\arraybackslash}p{.47\textwidth} >{\centering\arraybackslash}p{.47\textwidth}}
         \toprule %header
-        Millimeters & Centimeters\\
-        mm          &   cm\\
+        \textbf{Millimeters} & \textbf{Centimeters}\\
+        \textbf{mm}          &   \textbf{cm}\\
         \midrule
         1           &   0.1\\
-        10          &   1\\
-        100         &   10\\
-        1000        &   100\\
+        10          &   1\\ \hline
+        100         &   10\\ hline
+        1000        &   100\\ \hline
         10000       &   1000\\
         \bottomrule
     \end{tabular}
@@ -52,5 +52,132 @@ Figure~\ref{fig:logouitm} is $\dots$. \lipsum[1-2]
 
 \lipsum[2-3]
 
+%% An example of a long table
+\begin{longtable}{c|c|c} % Need to have 3 c's if there are 3 columns
+\caption{A long table.} \label{tab:alongtable} \\
 
+% header for 1st page
+\hline\multicolumn{1}{c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c}{\textbf{Third column}} \\ \hline 
+\endfirsthead
 
+% What to say at the beginning of the table on the next page, if more than 1 pages.
+% Change 3 to the number of columns.
+% Comment out these two lines if not needed.
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+
+% header if more than 1 pages.
+\hline \multicolumn{1}{c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c}{\textbf{Third column}} \\ \hline
+
+%DO NOT REMOVE THIS LINE
+\endhead
+
+% What to say at the end of the table, if more than 1 pages.
+% Change 3 to the number of columns.
+% Comment out this line if not needed.
+\hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
+
+%DO NOT REMOVE THIS LINE
+\endfoot
+
+% repeat \hline if require more than one line at the end of the table
+\hline
+\endlastfoot
+
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\ \hline
+One & Two & 10.2345667890122 \\
+\end{longtable}
+
+\lipsum[1]
+
+%% An example of a long table + landscape orientation
+\begin{landscape}
+
+\begin{longtable}{c|c|c|c|c|c} % Need to have 6 c's if there are 6 columns
+\caption{A long table.} \label{tab:alongtablelandscape} \\
+
+% header for 1st page
+\hline\multicolumn{1}{c|}{\textbf{First column}} &
+ \multicolumn{1}{c|}{\textbf{Second column}} &
+ \multicolumn{1}{c|}{\textbf{Third column}} &
+ \multicolumn{1}{c|}{\textbf{Forth column}} & 
+ \multicolumn{1}{c|}{\textbf{Fifth column}} & 
+ \multicolumn{1}{c}{\textbf{Last column}}
+ \\ \hline 
+\endfirsthead
+
+% What to say at the beginning of the table on the next page, if more than 1 pages.
+% Change 6 to the number of columns.
+% Comment out these two lines if not needed.
+\multicolumn{6}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+
+% header if more than 1 pages.
+\hline \multicolumn{1}{c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c}{\textbf{Third column}} \\ \hline
+
+%DO NOT REMOVE THIS LINE
+\endhead
+
+% What to say at the end of the table, if more than 1 pages.
+% Change 6 to the number of columns.
+% Comment out this line if not needed.
+\hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+
+%DO NOT REMOVE THIS LINE
+\endfoot
+
+% repeat \hline if require more than one line at the end of the table
+\hline
+\endlastfoot
+
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901223532523 2334235235 & 2334235235 abcdefghijkl 123456\\ \hline
+One & Two & 10.2345667890122 & a & 8901222r24234 2334235235 & 2334232235 abcdefghijkl 123456\\
+\end{longtable}
+
+\end{landscape}
+
+\lipsum[1]
